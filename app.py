@@ -23,7 +23,7 @@ with st.sidebar:
     asset_value = st.number_input("Tổng giá trị tài sản (VND)", min_value=0, value=1000000000, step=10000000)
     st.caption(f"Giá trị: **{asset_value:,.0f}** VND")
     
-    loan_amount_existing = st.number_input("Số tiền đã vay nơi khác (VND)", min_value=0, value=200000000, step=10000000)
+    loan_amount_existing = st.number_input("Số tiền đã vay (VND)", min_value=0, value=200000000, step=10000000)
     st.caption(f"Đã vay: **{loan_amount_existing:,.0f}** VND")
     
     remaining_asset_value = asset_value - loan_amount_existing
