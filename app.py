@@ -4,10 +4,17 @@ import pandas as pd
 # 1. Cấu hình giao diện
 st.set_page_config(page_title="Eximbank AI Lending - Final Version", layout="wide")
 
-# Chèn Logo Eximbank (Lấy link ảnh từ internet hoặc GitHub của chị)
-st.image("https://upload.wikimedia.org/wikipedia/vi/7/77/Logo_Eximbank.png", width=300)
+# 2. CHÈN LOGO VÀ TIÊU ĐỀ THEO HÀNG NGANG
+col_logo, col_title = st.columns([1, 5]) # Chia tỷ lệ 1:5 để logo nhỏ gọn bên trái
 
-st.title("🏦 Hệ Thống Thẩm Định Đề Xuất Cấp Hạn Mức Thấu Chi Online")
+with col_logo:
+    # Link ảnh logo Eximbank lấy trực tiếp từ nguồn uy tín
+    st.image("https://upload.wikimedia.org/wikipedia/vi/7/77/Logo_Eximbank.png", width=150)
+
+with col_title:
+    st.title("Hệ Thống Thẩm Định Cấp Hạn Mức Thấu Chi Online")
+    st.subheader("Giải pháp tích hợp: Dòng tiền - CIC - Tài sản đảm bảo")
+
 st.markdown("---")
 
 # 2. Thanh điều hướng bên trái (Sidebar)
