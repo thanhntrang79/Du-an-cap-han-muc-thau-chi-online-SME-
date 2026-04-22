@@ -57,7 +57,7 @@ if uploaded_file is not None:
             c1.metric("Dòng tiền thuần", f"{dong_tien_thuan:,.0f} VND")
             c2.metric("Điểm CIC", f"{customer_cic}")
             c3.metric("Giá trị TS còn lại", f"{remaining_asset_value:,.0f} VND")
-            c4.metric("10% TS còn lại", f"{limit_by_asset:,.0f} VND")
+            c4.metric("hạn mức TS còn lại (10%)", f"{limit_by_asset:,.0f} VND")
 
             st.markdown("---")
             st.subheader("🎯 Kết quả phê duyệt cuối cùng từ Eximbank:")
@@ -89,7 +89,7 @@ if uploaded_file is not None:
                     pdf.cell(200, 10, txt=f"Han muc de xuat: {final_limit:,.0f} VND", ln=True)
                     pdf.cell(200, 10, txt=f"Trang thai: {status}", ln=True)
                     pdf.ln(10)
-                    pdf.cell(200, 10, txt="Xac nhan boi: He thong AI Eximbank", ln=True)
+                    pdf.cell(200, 10, txt="Xac nhan boi: He thong Eximbank", ln=True)
                     
                     # Xuất file PDF
                     pdf_data = pdf.output(dest='S').encode('latin-1')
