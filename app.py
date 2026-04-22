@@ -60,7 +60,7 @@ if uploaded_file is not None:
             c4.metric("10% TS còn lại", f"{limit_by_asset:,.0f} VND")
 
             st.markdown("---")
-            st.subheader("🎯 Kết quả phê duyệt cuối cùng từ AI")
+            st.subheader("🎯 Kết quả phê duyệt cuối cùng từ Eximbank:")
 
             if dong_tien_thuan > 0:
                 base_limit = min(dong_tien_thuan * 3, 500000000)
