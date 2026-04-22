@@ -15,7 +15,6 @@ st.markdown("---")
 # 2. Thanh điều hướng bên trái (Sidebar)
 with st.sidebar:
     st.header("📋 1. Định danh & CIC")
-    customer_name = st.text_input("Họ tên khách hàng", "Nguyen Van A")
     customer_cic = st.number_input("Nhập điểm CIC khách hàng", min_value=0, max_value=850, value=650)
     
     st.write("---")
@@ -23,11 +22,15 @@ with st.sidebar:
     asset_value = st.number_input("Tổng giá trị tài sản (VND)", min_value=0, value=1000000000, step=10000000)
     st.caption(f"Giá trị: **{asset_value:,.0f}** VND")
     
-    loan_amount_existing = st.number_input("Số tiền đã vay (VND)", min_value=0, value=200000000, step=10000000)
+    loan_amount_existing = st.number_input("Số tiền đã được cấp tín dụng (VND)", min_value=0, value=200000000, step=10000000)
     st.caption(f"Đã vay: **{loan_amount_existing:,.0f}** VND")
     
     remaining_asset_value = asset_value - loan_amount_existing
     limit_by_asset = remaining_asset_value * 0.1 if remaining_asset_value > 0 else 0
+    
+    st.write("---")
+    st.write(f"✅ **Giá trị TS còn lại:** {remaining_asset_value:,.0f} VND")
+    st.write(f"✅ **Hạn mức còn lại(10%):** {limit_by_asset:,.0f} VND")
     
     st.write("---")
     st.header("📊 3. Dữ liệu dòng tiền")
