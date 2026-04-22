@@ -15,6 +15,10 @@ st.markdown("---")
 # 2. Thanh điều hướng bên trái (Sidebar)
 with st.sidebar:
     st.header("📋 1. Định danh & CIC")
+    customer_name = st.text_input("Họ tên khách hàng", "Nguyen Van A")
+    customer_cic = st.number_input("Nhập điểm CIC khách hàng", min_value=0, max_value=850, value=650)
+    
+    st.header("📋 1. Định danh & CIC")
     customer_cic = st.number_input("Nhập điểm CIC khách hàng", min_value=0, max_value=850, value=650)
     
     st.write("---")
