@@ -19,7 +19,7 @@ with st.sidebar:
     customer_cic = st.number_input("Nhập điểm CIC khách hàng", min_value=0, max_value=850, value=650, key="cic_input")
     
     st.write("---")
-    st.header("🏠 2. Tài sản đảm bảo (TSĐB)")
+    st.header("🏠 2. Tài sản đảm bảo")
     asset_value = st.number_input("Tổng giá trị tài sản (VND)", min_value=0, value=1000000000, step=10000000, key="asset_input")
     st.caption(f"Giá trị: **{asset_value:,.0f}** VND")
     
@@ -102,7 +102,7 @@ if uploaded_file is not None:
                         pdf.cell(200, 10, txt=f"Han muc de xuat: {final_limit:,.0f} VND", ln=True)
                         pdf.cell(200, 10, txt=f"Trang thai: {status}", ln=True)
                         pdf.ln(10)
-                        pdf.cell(200, 10, txt="Xac nhan boi: He thong AI Eximbank", ln=True)
+                        pdf.cell(200, 10, txt="Xac nhan boi: He thong Eximbank", ln=True)
                         
                         pdf_data = pdf.output(dest='S').encode('latin-1', 'ignore')
                         
