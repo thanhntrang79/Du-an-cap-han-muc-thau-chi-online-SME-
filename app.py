@@ -6,7 +6,7 @@ st.set_page_config(page_title="Eximbank AI Lending", layout="wide")
 
 # 2. PHẦN HIỂN THỊ LOGO (Thử dùng link dự phòng)
 # Nếu link này vẫn không hiện, có thể do mạng chặn ảnh từ web ngoài
-st.image("https://thebank.vn/uploads/2019/04/05/logo-ngan-hang-eximbank.jpg", width=250)
+st.image("logo.jpg", width=200)
 
 st.title("🏦 Hệ Thống Thẩm Định Đề Xuất Cấp Hạn Mức Thấu Chi Online")
 st.markdown("---")
